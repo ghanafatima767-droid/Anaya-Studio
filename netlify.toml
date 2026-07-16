@@ -1,13 +1,28 @@
+# ─── Netlify build configuration for Anaya Studio ────────────────────────────
+# Framework : Vite + React (pnpm workspace monorepo)
+# Build tool: pnpm (required — package.json uses pnpm catalog: / workspace: syntax)
+# Output    : artifacts/anaya-studio/dist/public
+# ──────────────────────────────────────────────────────────────────────────────
+
 [build]
-  base      = "artifacts/anaya-studio"
-  command   = "pnpm install --frozen-lockfile && pnpm run build"
-  publish   = "dist/public"
+  # Build from the monorepo root so pnpm workspaces resolve correctly.
+  # Do NOT set `base` to the artifact sub-dir — catalog: and workspace: deps
+  # are only resolvable when pnpm runs from the repo root.
+  command = "pnpm install && pnpm --filter @workspace/anaya-studio run build"
+  publish = "artifacts/anaya-studio/dist/public"
 
 [build.environment]
+  # Tell Netlify to use pnpm instead of npm/yarn.
+  PNPM_VERSION = "10"
   NODE_VERSION = "20"
-  BASE_PATH    = "/"
-  PORT         = "3000"
+  # Vite reads these at build time; defaults are already coded in vite.config.ts
+  # but setting them explicitly avoids any ambiguity.
+  BASE_PATH = "/"
+  PORT      = "3000"
 
+# ─── SPA routing ─────────────────────────────────────────────────────────────
+# React Router / Wouter: serve index.html for every route so deep links and
+# browser refresh work correctly (e.g. /shop, /contact).
 [[redirects]]
   from   = "/*"
   to     = "/index.html"
