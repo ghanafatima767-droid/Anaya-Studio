@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "Anaya Studio"
+version = "1.0.0"
+id = "artifacts/anaya-studio"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24421
+
+[services.development]
+run = "pnpm --filter @workspace/anaya-studio run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/anaya-studio", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/anaya-studio/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24421"
+BASE_PATH = "/"

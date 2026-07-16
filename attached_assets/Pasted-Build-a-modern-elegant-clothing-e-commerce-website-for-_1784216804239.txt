@@ -1,0 +1,56 @@
+Build a modern, elegant clothing e-commerce website for a Pakistani women's fashion brand called "Anaya Studio".
+
+BRAND INFO:
+- Brand Name: Anaya Studio
+- Tagline: "Style for every occasion. Stitched & unstitched collections for the modern, subtle, trendy & composed."
+- Category: Women's clothing (stitched & unstitched lawn/fabric collections)
+- Phone: 0309 9812648
+- Address: Plot #106, Saima Defence Mall, 9th St E, D.H.A. Phase 1 Defence, Karachi, Shop #UG34, Karachi, Pakistan
+- Instagram: https://www.instagram.com/anayastudio.official
+- Facebook: https://www.facebook.com/share/1b2zMXs7KE/?mibextid=wwXIfr
+
+THEME & DESIGN:
+- Luxury/premium look: deep black or charcoal background with elegant gold accents (#D4AF37), soft cream/white text
+- Elegant serif font for headings (e.g., Playfair Display), clean modern sans-serif for body text (e.g., Poppins/Inter)
+- Attractive, well-balanced font sizes — large bold headings, comfortable readable body text
+- Sophisticated boutique feel, not cluttered, not overloaded with pages
+
+PAGES (keep it short and simple, like a typical small clothing brand site — NOT a huge multi-page site):
+1. Home Page — includes:
+   - Hero section with smooth animated slideshow (auto-play, fade/slide transitions) showing featured outfits, tagline, and an "Order Now" button with hover animation
+   - Brief brand intro section with scroll fade-in animation
+   - Featured/New Arrivals product grid (product cards)
+   - Footer with contact info, address, social links, and Google Map embed
+2. Shop/Collection Page — full product grid with all products, each card has:
+   - Product image (smooth zoom-in hover effect)
+   - Product name
+   - Price (set realistic Pakistani lawn/unstitched & stitched fabric pricing — roughly Rs. 2,500–3,500 for unstitched lawn suits, Rs. 4,000–6,500 for stitched/embroidered collections, adjust naturally per product type)
+   - "Add to Cart" button
+3. Product Detail (optional, simple modal or page) — larger image, description, price, Add to Cart, quantity selector
+4. Contact Page — phone number, address, embedded Google Map (use the exact address above), Instagram and Facebook icons linking to the real URLs above (must be working links, open in new tab)
+
+CART FUNCTIONALITY:
+- Add to Cart button on every product
+- A cart icon in the navbar showing item count
+- A simple cart page/drawer showing added items, quantity, and total price (basic frontend cart logic is fine, no payment gateway needed unless simple checkout form)
+
+ANIMATIONS:
+- Smooth scroll-triggered fade-in / slide-up animations for each section
+- Smooth image carousel/slideshow with fade or slide transitions (no jarring jumps)
+- Hover effects: subtle zoom on product images, gold glow/underline on buttons and links
+- Sticky navbar that shrinks slightly on scroll
+- Mobile hamburger menu with smooth slide-in animation
+
+RESPONSIVENESS:
+- Fully mobile-friendly — navbar, product grid, slideshow, and cart must all work smoothly on small screens
+- Touch/swipe-friendly carousels on mobile
+
+TECH PREFERENCE:
+- React with Tailwind CSS preferred for clean styling and smooth animations
+- Lightweight and fast-loading, avoid unnecessary heavy libraries
+
+CONTENT NOTE:
+- Do NOT worry about product images right now — create placeholder product cards (with placeholder image boxes) for about 6-8 sample products with realistic names, descriptions, and prices in the style of Pakistani lawn/unstitched fabric collections. I will upload and replace the actual product images myself afterward.
+
+GOAL:
+A small, premium-feeling, fully animated, mobile-friendly clothing website for Anaya Studio with a working cart system, correct contact/address/social info, and a smooth modern user experience.
